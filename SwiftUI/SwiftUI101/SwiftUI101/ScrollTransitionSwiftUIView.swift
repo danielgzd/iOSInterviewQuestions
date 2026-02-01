@@ -5,15 +5,53 @@
 //  Created by chenyilong on 2026/1/26.
 //
 import SwiftUI
-import SwiftUI
+
+enum CarouselImage: String, CaseIterable, Identifiable {
+    case iteatime
+    case iteatime1
+    case iteatime2
+    case iteatime3
+    case iteatime4
+    
+    // MARK: - Identity
+    var id: String { rawValue }
+    
+    // MARK: - Display index (1-based, for UI)
+    var displayIndex: Int {
+        Self.allCases.firstIndex(of: self)! + 1
+    }
+    
+    // MARK: - Title
+    var title: String {
+        "Image \(displayIndex)"
+    }
+    
+    // MARK: - Analytics tag
+    var analyticsTag: String {
+        "carousel_image_\(displayIndex)"
+    }
+}
+
+
+extension CarouselImage {
+    static var looped: [CarouselImage] {
+        guard let first = allCases.first,
+              let last = allCases.last else {
+            return []
+        }
+        return [last] + allCases + [first]
+    }
+}
+
+extension Image {
+    init(_ asset: CarouselImage) {
+        self.init(asset.rawValue)
+    }
+}
 
 struct ScrollTransitionSwiftUIView: View {
-    let images = ["iteatime", "iteatime1", "iteatime2", "iteatime3", "iteatime4"]
-    
-    // Infinite scrolling data
-    var loopImages: [String] {
-        [images.last!] + images + [images.first!]
-    }
+    let images = CarouselImage.allCases
+    let loopImages = CarouselImage.looped
     
     @State private var currentIndex: Int? = nil  // ✅ Initialized as nil
     @State private var hasAppeared = false       // ✅ Track first load
@@ -22,12 +60,11 @@ struct ScrollTransitionSwiftUIView: View {
         GeometryReader { geo in
             VStack {
                 Spacer()
-                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
                         ForEach(loopImages.indices, id: \.self) { index in
                             VStack {
-                                Image(loopImages[index])
+                                Image(loopImages[index].rawValue)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: geo.size.width - 32)
@@ -39,10 +76,12 @@ struct ScrollTransitionSwiftUIView: View {
                                     }
                                     .containerRelativeFrame(.horizontal)
                                     .id(index)
-                                Text("\(index)")
+                                Text("\(loopImages[index].title)")
                                     .font(.largeTitle)
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.black)
+
+                                
                             }
                         }
                     }
@@ -90,3 +129,4 @@ struct ScrollTransitionSwiftUIView: View {
 #Preview {
     ScrollTransitionSwiftUIView()
 }
+

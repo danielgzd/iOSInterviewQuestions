@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A099D052F2EF368006933F7 /* LazyVGridSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A099D042F2EF368006933F7 /* LazyVGridSwiftUIView.swift */; };
 		9A28A72A2A788C5600478870 /* SwiftUI101App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28A7292A788C5600478870 /* SwiftUI101App.swift */; };
 		9A28A72C2A788C5700478870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28A72B2A788C5700478870 /* ContentView.swift */; };
 		9A28A72E2A788C5A00478870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A28A72D2A788C5A00478870 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A099D042F2EF368006933F7 /* LazyVGridSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVGridSwiftUIView.swift; sourceTree = "<group>"; };
 		9A28A7262A788C5600478870 /* SwiftUI101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A28A7292A788C5600478870 /* SwiftUI101App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI101App.swift; sourceTree = "<group>"; };
 		9A28A72B2A788C5700478870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				9AF1756C2F17390F00F02BCD /* ObservationiOS17DemoView.swift */,
 				9AAC09172F20673F00C89A7C /* EnvironmentExampleSwiftUIView.swift */,
 				9AAC091D2F27186000C89A7C /* ScrollTransitionSwiftUIView.swift */,
+				9A099D042F2EF368006933F7 /* LazyVGridSwiftUIView.swift */,
 				9A28A72D2A788C5A00478870 /* Assets.xcassets */,
 				9A28A72F2A788C5A00478870 /* Preview Content */,
 			);
@@ -282,6 +285,7 @@
 				9AAC09182F20673F00C89A7C /* EnvironmentExampleSwiftUIView.swift in Sources */,
 				9A28A72C2A788C5700478870 /* ContentView.swift in Sources */,
 				9A28A72A2A788C5600478870 /* SwiftUI101App.swift in Sources */,
+				9A099D052F2EF368006933F7 /* LazyVGridSwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
