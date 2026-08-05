@@ -625,7 +625,13 @@ class Test {
 
 所以，哪种方法更好取决于具体的使用场景。如果你的`cars`数组经常发生变化，那么方法A可能更好，因为它会在每次执行`loop`时反映最新的状态。然而，如果`cars`数组基本不变，但你需要频繁地执行`loop`，那么方法B可能更好，因为它可以避免不必要的重复计算。
 
+ 更多请参考文本的这个部分： 
+ 
+ [Swift 的计算属性、存储属性、懒加载]( https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/02_Swift_interview_questions/theory.md#6swift-%E7%9A%84%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%AD%98%E5%82%A8%E5%B1%9E%E6%80%A7%E6%87%92%E5%8A%A0%E8%BD%BD "") 
 
+ [lazy load 是怎么实现的？]( https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/02_Swift_interview_questions/theory.md#lazy-load-%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%E7%9A%84 "") 
+ 
+ 
 ## WHY Swift not ObjC?
 
 [https://chat.openai.com/share/eef4d254-7ff5-4b37-b58e-431fb10e4e97](https://chat.openai.com/share/eef4d254-7ff5-4b37-b58e-431fb10e4e97)
@@ -1917,11 +1923,14 @@ ARC 优化 - 虽然和 ObjC ⼀样都是使⽤ ARC，Swift 通过编译器优�
 
 ## 15. How do you filter an array of instances to extract a specific property in Swift?
 
+
+
 [https://chat.openai.com/share/05a875de-5e3b-4257-b68b-f296c218f16d](https://chat.openai.com/share/05a875de-5e3b-4257-b68b-f296c218f16d)
 
-![swift_map_type_diff_en](../assets/swift_map_type_diff_en.jpg)
-![swift_map_type_diff_cn](../assets/swift_map_type_diff_cn.jpg)
+![swift_map_type_diff_en](../assets/swift_map_type_diff/swift_map_type_diff_en.jpg)
+![swift_map_type_diff_cn](../assets/swift_map_type_diff/swift_map_type_diff_cn.jpg)
 
+请参考本文的 这个部分: [Difference between map, flatMap and compactMap in Swift]( https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/02_Swift_interview_questions/theory.md#difference-between-map-flatmap-and-compactmap-in-swift "") 
 
 
 
@@ -1988,6 +1997,8 @@ Remember, both `flatMap` and `compactMap` do not mutate the original array. They
 ![swift-combine](../assets/swift-combine.jpg)
 
 Swift Combine框架是一个响应式编程框架，它可以处理异步事件，例如用户交互，网络响应等。Combine使用了发布者和订阅者模型，发布者发布事件，订阅者接收并处理这些事件。
+
+iOS 17又 推出了 Observation 框架，写法比 Swift Combine 框架更加简易。Observation 部分请参考本文的 这个部分: [《What’s the difference between @ObservedObject, @State, and @EnvironmentObject?》](https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/02_Swift_interview_questions/practical.md#whats-the-difference-between-observedobject-state-and-environmentobject) 
 
 Combine框架中也有`map`，`flatMap`和`compactMap`操作符，但这些操作符适用于处理异步事件流。这些操作符的行为与数组和集合上的操作非常相似：
 

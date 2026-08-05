@@ -163,6 +163,9 @@ iOS17 以后 是Observation框架，性能更好了，不过写法不同了.  [S
 ![SwiftUI_and_Combine](../assets/SwiftUI_and_Combine.png)
 ![swift-combine](../assets/swift-combine.jpg)
 
+Combine 的应用场景：
+比如基于 MVVM 的实现，数据绑定这部分最好用 combine 做，网络请求回调可以用 await/async, 这样代码现代一点，可读性会更好，如果仅仅使用 MVVM 不适用类似 Combine 这样的数据绑定方式， 会看起来像是用 Swift 写的 OC 项目。
+
 ## Explain reactive programming and its advantages, mentioning frameworks like RxSwift and Combine.
 
 ![swift-combine](../assets/asynchronous_APIs_in_iOS/cn.jpg)
@@ -170,7 +173,7 @@ iOS17 以后 是Observation框架，性能更好了，不过写法不同了.  [S
 
  [Answer from AI]( https://chat.openai.com/share/8e77bb97-fdf9-405a-bd44-9c769777211f "") 
 
-Combine类似 RxSwift(一个类Redux的架构)
+Combine 类似 RxSwift(一个类Redux的架构)
 
 ## Q.Swift 是面向对象还是函数式的编程语言?
 

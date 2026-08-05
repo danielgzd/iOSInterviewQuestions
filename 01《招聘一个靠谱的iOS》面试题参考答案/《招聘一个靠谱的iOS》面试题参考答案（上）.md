@@ -2224,6 +2224,15 @@ objc_setAssociatedObject (
  2. 实例方法中也可以调用类方法(通过类名)
 
 
+其中关于“类方法中不能直接调用对象方法；实例方法中也可以调用类方法(通过类名)”部分有争议， 
+
+有人认为“类可以调用实例定义的方法，当然必须得是NSObject中定义的实例方法，例如[ClassA copy], Class调用了实例方法copy，只是调用没有意义，IMP中的id传的是class，能调用的原因是因为类的元类的superClass最终指向的是NSObject(也就是实例的isa最终指向的),也就是文章中发的那个图，所以是能找到对应的实例方法。
+实例调用class方法严格来说也不正确，因为你调用的[[a class] func]，调用func的其实是[a class]，也就是a的class而并非实例a”
+
+
+详情见issue： [类方法和实例方法调用有个写反了 #131]( https://github.com/ChenYilong/iOSInterviewQuestions/issues/131 "") 
+
+
 ----------
 
 @property部分主要参考
